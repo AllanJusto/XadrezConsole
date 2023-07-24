@@ -1,7 +1,7 @@
 ﻿using tabuleiro;
 
 
-namespace XadrezConsole.xadrez
+namespace xadrez
 {
     class PosicaoXadrez
     {

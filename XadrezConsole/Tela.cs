@@ -15,19 +15,22 @@ namespace XadrezConsole
             imprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
-            Console.WriteLine("Aguardadno jogada: " + partida.jogadorAtual);
+            Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+            if (partida.xeque) { 
+            Console.WriteLine("XEQUE!");
+            }
         }
 
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida)
         {
             Console.WriteLine("Peças capturadas: ");
-            Console.Write("Brancas: ");
+            Console.Write("Vermelhas: ");
             ConsoleColor aux1 = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
             imprimirConjunto(partida.pecasCapturadas(Cor.Branca));
             Console.ForegroundColor = aux1;
             Console.WriteLine();
-            Console.Write("Pretas: ");
+            Console.Write("Azuis: ");
             ConsoleColor aux2 = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Blue;
             imprimirConjunto(partida.pecasCapturadas(Cor.Preta));
@@ -95,8 +98,6 @@ namespace XadrezConsole
             int linha = int.Parse(s[1] + "");
             return new PosicaoXadrez(coluna, linha);
         }
-
-
 
         public static void imprimirPeca(Peca peca)
 

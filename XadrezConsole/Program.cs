@@ -44,7 +44,6 @@ namespace xadrez_console
                         Console.ReadLine();
                     }
                 }
- 
 
                 Tela.imprimirTabuleiro(partida.tab);
             }
@@ -53,7 +52,6 @@ namespace xadrez_console
                 Console.WriteLine(e.Message);
             }
             Console.ReadLine();
-
         }
     }
 }
